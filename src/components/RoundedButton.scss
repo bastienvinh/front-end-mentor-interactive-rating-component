@@ -1,0 +1,40 @@
+.rounded-button {
+  width: 50px;
+  height: 50px;
+
+  background-color: hsla(216, 12%, 54%, 0.2);
+  border-radius: 50%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  transition: background-color 0.5s linear, color 0.5s linear;
+
+  cursor: pointer;
+
+  svg path {
+    transition: all 0.5s linear;
+  }
+
+  &.active {
+    background-color: hsl(216, 12%, 54%);
+    color: white;
+  }
+
+  &:hover {
+    background-color: hsl(25, 97%, 53%);
+    color: white;
+  }
+
+  &:hover svg path {
+    fill: #fff;
+  }
+}
+
+@media screen and (max-width: 575px) {
+  .rounded-button:hover {
+    background-color: hsl(216, 12%, 54%);
+    color: white;
+  }
+}
